@@ -8,6 +8,8 @@ var app = express();
 
 app.use(bodyParser.json());
 
+var port = process.env.PORT || 8080;
+
 app.get('/', function(req, res){
   res.send('This is working');
 });
@@ -89,6 +91,6 @@ io.on('connection', function (socket) {
 
 app.use(cors());
 
-server.listen(8080, function() {
-	console.log('Servidor corriendo en http://localhost:8080');
+server.listen(port, function() {
+	console.log('Servidor corriendo en http://socket-example , port: ' + port);
 });
