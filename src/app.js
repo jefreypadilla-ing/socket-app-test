@@ -8,6 +8,10 @@ var app = express();
 
 app.use(bodyParser.json());
 
+app.get('/', function(req, res){
+  res.send('This is working');
+});
+
 app.post('/test', function(req, res){
   console.log('Post test - Socket Id: ' + req.body.socketid);
   io.sockets.to(req.body.socketid).emit('socket:idacquired', 
