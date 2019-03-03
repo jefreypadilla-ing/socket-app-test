@@ -2,6 +2,8 @@ var http = require('http');
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
+var cors = require('cors');
+
 var app = express();
 
 app.use(bodyParser.json());
@@ -80,6 +82,8 @@ io.on('connection', function (socket) {
 
     console.log(`Socket ${socket.id} has connected`);
 });
+
+app.use(cors());
 
 server.listen(8080, function() {
 	console.log('Servidor corriendo en http://localhost:8080');
