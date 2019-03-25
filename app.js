@@ -62,7 +62,7 @@ app.post('/test', function(req, res){
     }
   }  
   );
-  res.json({ result:'OK' });
+  res.json({ responseStatus: { description : 'OK' }});
 });
 
 var server = http.createServer(app);
