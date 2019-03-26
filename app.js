@@ -32,6 +32,8 @@ app.post('/test', function(req, res){
           "SocialName":"Digital Liquid SAC",
           "InitPlanDate":"10/10/2018",
           "Created":"10/10/2018 12:00",
+	  "DeliveryAddress":"Carrera",
+	  "TransactionId":"235665",
           "Orders":[
             {
               "OrderId":3123123,
@@ -49,6 +51,8 @@ app.post('/test', function(req, res){
                   "ProductDesc":"MOTO C4",
                   "Brand":"MOTOROLA",
                   "FixedCharge":45,
+                  "NewFixedRate":45,
+                  "PhonePrice":45,
                   "Lines":[
                     {
                         "PhoneNumber":"9879876543"
